@@ -5,3 +5,11 @@ _site/
 vendor/
 .sass-cache/
 .claude/settings.local.json
+
+# 原片工作区与本地测试样片（绝不入库）
+photos-source/
+test/resources/
+
+# 图片管线清单
+assets/photos/.manifest.yml
+assets/photos/.manifest.yml.last-run

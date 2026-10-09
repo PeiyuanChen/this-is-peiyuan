@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+# 用法: build_albums [source_root]  （默认 photos-source）
+require_relative "../lib/pipeline"
+
+source_root = ARGV[0] || "photos-source"
+unless File.directory?(source_root)
+  abort "源目录不存在: #{source_root}。请先创建相册（bin/new_album <slug>）。"
+end
+
+report = Pipeline.run(
+  source_root: source_root,
+  output_root: "assets/photos",
+  data_root: "_data/albums"
+)
+puts "新生成: #{report.processed.size}  跳过: #{report.skipped.size}  错误: #{report.errors.size}"
+report.errors.each { |e| puts "  [ERROR] #{e}" }
+exit(report.ok? ? 0 : 1)

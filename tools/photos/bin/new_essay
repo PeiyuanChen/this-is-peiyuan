@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+# 用法: new_essay <slug>
+require_relative "../lib/scaffold"
+
+abort "用法: new_essay <slug>" if ARGV[0].nil?
+puts Scaffold.new_essay(Dir.pwd, ARGV[0])

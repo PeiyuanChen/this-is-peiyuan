@@ -6,7 +6,15 @@
 
 **Blocked by:** None (can start immediately)；纯本地脚本，与站点构建解耦，不依赖 GitHub 环境
 
-**Status:** ready-for-agent
+**Status:** resolved
+
+## Answer
+
+tools/photos/ 下四个模块（ExifReader 提取、Resizer 调 ffmpeg 缩放、Pipeline 编排与清单、Scaffold 脚手架）+ 四个 bin 命令。
+- 三档：thumb 500px/q4、medium 1280px/q3、large 2000px/q3，实测大图约 130–200KB
+- 幂等：SHA256 清单，未变不处理；坏片跳过、错误进报告不中断
+- 测试：13 runs、61 assertions 全绿；命令行端到端冒烟通过
+- 无 EXIF 字段：nil 键被剔除，IMG07481 仅保留光圈/快门
 
 - [ ] 每张原片生成缩略图、中等图、2000px 大图三档，单张大图体积控制在几百 KB 量级
 - [ ] 正确提取光圈、快门、ISO（相机/镜头可留存）

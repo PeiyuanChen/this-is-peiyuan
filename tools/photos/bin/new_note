@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+# 用法: new_note <slug> [book|topic]  （默认 topic）
+require_relative "../lib/scaffold"
+
+abort "用法: new_note <slug> [book|topic]" if ARGV[0].nil?
+subtype = %w[book topic].include?(ARGV[1]) ? ARGV[1] : "topic"
+puts Scaffold.new_note(Dir.pwd, ARGV[0], subtype: subtype)
