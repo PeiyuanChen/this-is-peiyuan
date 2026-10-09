@@ -1,0 +1,12 @@
+title: "This is Peiyuan"
+locale: "zh-CN"
+
+theme: minimal-mistakes-jekyll
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-gist
+  - jemoji
+  - jekyll-include-cache
