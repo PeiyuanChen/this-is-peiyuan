@@ -6,7 +6,13 @@
 
 **Blocked by:** None (can start immediately)
 
-**Status:** ready-for-agent
+**Status:** resolved
+
+## Answer
+
+线上地址：https://peiyuanchen.github.io/this-is-peiyuan/ （200，页面与 CSS 正常）。
+过程中修复一处问题：Gemfile.lock 最初只有 Windows 平台，CI Linux 上 Setup Ruby 失败，补加 x86_64-linux 平台后部署成功——同时满足"构建失败有清晰报错"验收项。
+仓库级配置：http.proxy=127.0.0.1:17891、credential.helper=manager。
 
 - [ ] 仓库 git 初始化，Gemfile 锁定 Jekyll 与 Minimal Mistakes，`bundle install` 成功
 - [ ] `bundle exec jekyll s` 本地可启动并打开占位首页（统一通过 bundle exec 调用，绕过 WindowsApps 下失效的 jekyll 占位程序）
