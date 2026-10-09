@@ -69,6 +69,9 @@ class PipelineTest < Minitest::Test
     assert_equal "傍晚的光", captioned["caption"]
     assert_nil partial["caption"]
 
+    assert_equal %w[thumb medium large], captioned["urls"].keys
+    assert(captioned["urls"].keys.all? { |k| k.is_a?(String) })
+
     assert_equal "IMG07481", data["cover"]
   end
 

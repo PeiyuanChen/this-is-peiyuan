@@ -1,0 +1,96 @@
+---
+---
+
+/* 摄影首页：相册封面网格 */
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.album-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.album-card img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+}
+
+.album-card-title {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 1rem;
+}
+
+.album-card-date {
+  display: block;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+/* 相册页：瀑布流，不裁切照片 */
+.photo-grid {
+  column-count: 3;
+  column-gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.photo-grid .gallery-slide {
+  display: block;
+  break-inside: avoid;
+  margin-bottom: 0.8rem;
+}
+
+.photo-grid .gallery-slide img {
+  width: 100%;
+  display: block;
+}
+
+.album-description {
+  margin-top: 0.5rem;
+  opacity: 0.85;
+}
+
+@media (max-width: 900px) {
+  .photo-grid { column-count: 2; }
+}
+
+@media (max-width: 560px) {
+  .photo-grid { column-count: 1; }
+}
+
+/* PhotoSwipe 内 EXIF：叠在图上、清晰可读 */
+.pswp-exif {
+  position: absolute;
+  pointer-events: none;
+  left: 1.2rem;
+  bottom: 3.2rem;
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.4;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
+}
+
+/* PhotoSwipe 内 caption：照片下方 */
+.pswp-caption {
+  position: absolute;
+  pointer-events: none;
+  left: 1.2rem;
+  right: 1.2rem;
+  bottom: 0.8rem;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.5;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
+}
+
+@media (max-width: 600px) {
+  .pswp-exif { font-size: 14px; bottom: 3rem; }
+  .pswp-caption { font-size: 13px; }
+}

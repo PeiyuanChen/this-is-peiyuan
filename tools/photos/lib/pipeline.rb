@@ -1,4 +1,5 @@
 require "yaml"
+require "date"
 require "digest"
 require "fileutils"
 require_relative "exif_reader"
@@ -92,7 +93,7 @@ class Pipeline
       "width" => large_dims[:width],
       "height" => large_dims[:height],
       "exif" => (ExifReader.read(src) || {}).transform_keys(&:to_s),
-      "urls" => outputs.transform_values { |p| relative_path(p) }
+      "urls" => outputs.transform_keys(&:to_s).transform_values { |p| relative_path(p) }
     }.compact
   end
 
@@ -129,7 +130,7 @@ class Pipeline
 
   def load_album_meta(dir)
     path = File.join(dir, "album.yml")
-    File.exist?(path) ? (YAML.load_file(path) || {}) : {}
+    File.exist?(path) ? (YAML.load_file(path, permitted_classes: [Date, Time]) || {}) : {}
   end
 
   def load_manifest

@@ -2,7 +2,7 @@
 # 用法: build_albums [source_root]  （默认 photos-source）
 require_relative "../lib/pipeline"
 
-source_root = ARGV[0] || "photos-source"
+source_root = ARGV[0] || "photo-source"
 unless File.directory?(source_root)
   abort "源目录不存在: #{source_root}。请先创建相册（bin/new_album <slug>）。"
 end

@@ -1,6 +1,8 @@
 title: "This is Peiyuan"
 locale: "zh-CN"
 
+image_cdn: ""
+
 theme: minimal-mistakes-jekyll
 
 plugins:

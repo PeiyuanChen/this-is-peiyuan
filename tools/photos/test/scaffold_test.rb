@@ -33,5 +33,6 @@ class ScaffoldTest < Minitest::Test
     assert_equal "", meta["title"]
     assert_equal "", meta["date"]
     assert_nil meta["cover"]
+    assert_match(%r{\Aphoto-source/kyoto-2019\z}, dir.tr("\\", "/"))
   end
 end

@@ -1,0 +1,39 @@
+---
+layout: single
+---
+{% assign cdn = site.image_cdn | default: "" %}
+{% assign album = page.album %}
+
+<link rel="stylesheet" href="{{ '/assets/photoswipe/photoswipe.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/albums.css' | relative_url }}">
+
+{% if album.description %}
+<p class="album-description">{{ album.description }}</p>
+{% endif %}
+
+<div id="album-gallery" class="photo-grid">
+{% for photo in album.photos %}
+  {% if cdn == "" %}
+    {% assign href = '/assets/photos/' | append: photo.urls.large | relative_url %}
+    {% assign src = '/assets/photos/' | append: photo.urls.thumb | relative_url %}
+  {% else %}
+    {% assign href = cdn | append: '/' | append: photo.urls.large %}
+    {% assign src = cdn | append: '/' | append: photo.urls.thumb %}
+  {% endif %}
+  <a class="gallery-slide"
+     href="{{ href }}"
+     target="_blank" rel="noopener"
+     data-pswp-width="{{ photo.width }}"
+     data-pswp-height="{{ photo.height }}"
+     data-f-number="{{ photo.exif.f_number }}"
+     data-exposure="{{ photo.exif.exposure }}"
+     data-iso="{{ photo.exif.iso }}"
+     data-caption="{{ photo.caption | escape }}">
+    <img src="{{ src }}" alt="{{ photo.caption | default: '' }}" loading="lazy">
+  </a>
+{% endfor %}
+</div>
+
+<script src="{{ '/assets/photoswipe/photoswipe.umd.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/photoswipe/photoswipe-lightbox.umd.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/album.js' | relative_url }}"></script>

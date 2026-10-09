@@ -1,0 +1,309 @@
+---
+title: 腾格尔沙漠
+date: 2026-10-04
+description: 2026 年国庆，腾格尔沙漠。沙丘、骆驼、落日，与未竟的星空之约。
+slug: tengger-202610
+cover: IMG09035
+photos:
+- file: IMG09035
+  caption: 有一天你是否会感觉，这飘落的沙和时光好像
+  width: 2000
+  height: 1334
+  exif:
+    make: SONY
+    model: ILCE-7RM3
+    lens: E 21mm F2.8
+    f_number: 2.8
+    exposure: 1/1000
+    iso: 100
+  urls:
+    thumb: tengger-202610/thumb/IMG09035.jpg
+    medium: tengger-202610/medium/IMG09035.jpg
+    large: tengger-202610/large/IMG09035.jpg
+- file: IMG09039
+  width: 2000
+  height: 1334
+  exif:
+    make: SONY
+    model: ILCE-7RM3
+    lens: E 21mm F2.8
+    f_number: 2.8
+    exposure: 1/4000
+    iso: 100
+  urls:
+    thumb: tengger-202610/thumb/IMG09039.jpg
+    medium: tengger-202610/medium/IMG09039.jpg
+    large: tengger-202610/large/IMG09039.jpg
+- file: IMG09046
+  width: 2000
+  height: 1334
+  exif:
+    make: SONY
+    model: ILCE-7RM3
+    lens: E 21mm F2.8
+    f_number: 2.8
+    exposure: 1/400
+    iso: 100
+  urls:
+    thumb: tengger-202610/thumb/IMG09046.jpg
+    medium: tengger-202610/medium/IMG09046.jpg
+    large: tengger-202610/large/IMG09046.jpg
+- file: IMG09068
+  width: 2000
+  height: 1334
+  exif:
+    make: SONY
+    model: ILCE-7RM3
+    lens: E 21mm F2.8
+    f_number: 2.8
+    exposure: 1/60
+    iso: 100
+  urls:
+    thumb: tengger-202610/thumb/IMG09068.jpg
+    medium: tengger-202610/medium/IMG09068.jpg
+    large: tengger-202610/large/IMG09068.jpg
+- file: IMG09092
+  width: 2000
+  height: 1334
+  exif:
+    make: SONY
+    model: ILCE-7RM3
+    lens: ZEISS Batis 1.8/85
+    f_number: 4
+    exposure: 1/2000
+    iso: 100
+  urls:
+    thumb: tengger-202610/thumb/IMG09092.jpg
+    medium: tengger-202610/medium/IMG09092.jpg
+    large: tengger-202610/large/IMG09092.jpg
+- file: IMG09113
+  caption: 和朋友们一起奔向沙丘的最高处
+  width: 2000
+  height: 1334
+  exif:
+    make: SONY
+    model: ILCE-7RM3
+    lens: ZEISS Batis 1.8/85
+    f_number: 2
+    exposure: 1/8000
+    iso: 100
+  urls:
+    thumb: tengger-202610/thumb/IMG09113.jpg
+    medium: tengger-202610/medium/IMG09113.jpg
+    large: tengger-202610/large/IMG09113.jpg
+- file: IMG09121
+  width: 2000
+  height: 1334
+  exif:
+    make: SONY
+    model: ILCE-7RM3
+    lens: ZEISS Batis 1.8/85
+    f_number: 2.8
+    exposure: 1/2500
+    iso: 100
+  urls:
+    thumb: tengger-202610/thumb/IMG09121.jpg
+    medium: tengger-202610/medium/IMG09121.jpg
+    large: tengger-202610/large/IMG09121.jpg
+- file: IMG09122
+  caption: 在这里，爸爸不太担心你摔倒呢
+  width: 2000
+  height: 1334
+  exif:
+    make: SONY
+    model: ILCE-7RM3
+    lens: ZEISS Batis 1.8/85
+    f_number: 2.8
+    exposure: 1/3200
+    iso: 100
+  urls:
+    thumb: tengger-202610/thumb/IMG09122.jpg
+    medium: tengger-202610/medium/IMG09122.jpg
+    large: tengger-202610/large/IMG09122.jpg
+- file: IMG09123
+  width: 2000
+  height: 1334
+  exif:
+    make: SONY
+    model: ILCE-7RM3
+    lens: ZEISS Batis 1.8/85
+    f_number: 2.8
+    exposure: 1/2500
+    iso: 100
+  urls:
+    thumb: tengger-202610/thumb/IMG09123.jpg
+    medium: tengger-202610/medium/IMG09123.jpg
+    large: tengger-202610/large/IMG09123.jpg
+- file: IMG09158
+  width: 2000
+  height: 1334
+  exif:
+    make: SONY
+    model: ILCE-7RM3
+    lens: ZEISS Batis 1.8/85
+    f_number: 4
+    exposure: 1/1600
+    iso: 100
+  urls:
+    thumb: tengger-202610/thumb/IMG09158.jpg
+    medium: tengger-202610/medium/IMG09158.jpg
+    large: tengger-202610/large/IMG09158.jpg
+- file: IMG09163
+  caption: 骑骆驼也是很有趣的，对吧
+  width: 2000
+  height: 1334
+  exif:
+    make: SONY
+    model: ILCE-7RM3
+    lens: ZEISS Batis 1.8/85
+    f_number: 2
+    exposure: 1/8000
+    iso: 100
+  urls:
+    thumb: tengger-202610/thumb/IMG09163.jpg
+    medium: tengger-202610/medium/IMG09163.jpg
+    large: tengger-202610/large/IMG09163.jpg
+- file: IMG09185
+  width: 2000
+  height: 1124
+  exif:
+    make: SONY
+    model: ILCE-7RM3
+    lens: ZEISS Batis 1.8/85
+    f_number: 5.6
+    exposure: 1/1250
+    iso: 100
+  urls:
+    thumb: tengger-202610/thumb/IMG09185.jpg
+    medium: tengger-202610/medium/IMG09185.jpg
+    large: tengger-202610/large/IMG09185.jpg
+- file: IMG09197
+  width: 2000
+  height: 1124
+  exif:
+    make: SONY
+    model: ILCE-7RM3
+    lens: ZEISS Batis 1.8/85
+    f_number: 2
+    exposure: 1/1600
+    iso: 100
+  urls:
+    thumb: tengger-202610/thumb/IMG09197.jpg
+    medium: tengger-202610/medium/IMG09197.jpg
+    large: tengger-202610/large/IMG09197.jpg
+- file: IMG09204
+  caption: 开始不配合爸爸拍照了吗
+  width: 2000
+  height: 1124
+  exif:
+    make: SONY
+    model: ILCE-7RM3
+    lens: ZEISS Batis 1.8/85
+    f_number: 2.8
+    exposure: 1/320
+    iso: 100
+  urls:
+    thumb: tengger-202610/thumb/IMG09204.jpg
+    medium: tengger-202610/medium/IMG09204.jpg
+    large: tengger-202610/large/IMG09204.jpg
+- file: IMG09214
+  width: 2000
+  height: 1124
+  exif:
+    make: SONY
+    model: ILCE-7RM3
+    lens: ZEISS Batis 1.8/85
+    f_number: 2.8
+    exposure: 1/1250
+    iso: 100
+  urls:
+    thumb: tengger-202610/thumb/IMG09214.jpg
+    medium: tengger-202610/medium/IMG09214.jpg
+    large: tengger-202610/large/IMG09214.jpg
+- file: IMG09217
+  width: 2000
+  height: 1124
+  exif:
+    make: SONY
+    model: ILCE-7RM3
+    lens: ZEISS Batis 1.8/85
+    f_number: 4
+    exposure: 1/800
+    iso: 100
+  urls:
+    thumb: tengger-202610/thumb/IMG09217.jpg
+    medium: tengger-202610/medium/IMG09217.jpg
+    large: tengger-202610/large/IMG09217.jpg
+- file: IMG09219
+  width: 2000
+  height: 1124
+  exif:
+    make: SONY
+    model: ILCE-7RM3
+    lens: ZEISS Batis 1.8/85
+    f_number: 2.8
+    exposure: 1/1250
+    iso: 100
+  urls:
+    thumb: tengger-202610/thumb/IMG09219.jpg
+    medium: tengger-202610/medium/IMG09219.jpg
+    large: tengger-202610/large/IMG09219.jpg
+- file: IMG09221
+  caption: 我拿着相机，却没有人给我拍，自己拍一张投在另一个沙丘上的我的影子吧
+  width: 2000
+  height: 1124
+  exif:
+    make: SONY
+    model: ILCE-7RM3
+    lens: ZEISS Batis 1.8/85
+    f_number: 4
+    exposure: 1/500
+    iso: 100
+  urls:
+    thumb: tengger-202610/thumb/IMG09221.jpg
+    medium: tengger-202610/medium/IMG09221.jpg
+    large: tengger-202610/large/IMG09221.jpg
+- file: IMG09226
+  width: 2000
+  height: 1124
+  exif:
+    make: SONY
+    model: ILCE-7RM3
+    lens: ZEISS Batis 1.8/85
+    f_number: 5.6
+    exposure: 1/100
+    iso: 100
+  urls:
+    thumb: tengger-202610/thumb/IMG09226.jpg
+    medium: tengger-202610/medium/IMG09226.jpg
+    large: tengger-202610/large/IMG09226.jpg
+- file: IMG09227
+  caption: 沙漠的日落，这颜色，真是很特别的。只是有时我会想到，那些世代生活在这里的人们，看着这沙漠会是什么感受
+  width: 2000
+  height: 1124
+  exif:
+    make: SONY
+    model: ILCE-7RM3
+    lens: ZEISS Batis 1.8/85
+    f_number: 5.6
+    exposure: 1/320
+    iso: 100
+  urls:
+    thumb: tengger-202610/thumb/IMG09227.jpg
+    medium: tengger-202610/medium/IMG09227.jpg
+    large: tengger-202610/large/IMG09227.jpg
+- file: IMG09353
+  caption: 夏天的时候我一直想带孩子看星星看银河，现在是秋天了，日落时半人马座已经落到地平线以下。下一个夏天我们找个地方看银河吧
+  width: 2000
+  height: 1334
+  exif:
+    make: SONY
+    model: ILCE-7RM3
+    lens: E 21mm F2.8
+    f_number: 2.8
+    exposure: 30s
+    iso: 100
+  urls:
+    thumb: tengger-202610/thumb/IMG09353.jpg
+    medium: tengger-202610/medium/IMG09353.jpg
+    large: tengger-202610/large/IMG09353.jpg

@@ -14,7 +14,7 @@ module Scaffold
   end
 
   def new_album(root, slug)
-    dir = File.join("photos-source", slug)
+    dir = File.join("photo-source", slug)
     FileUtils.mkdir_p(File.join(root, dir))
     File.write(File.join(root, dir, "album.yml"),
                YAML.dump("title" => "", "date" => "", "description" => "", "cover" => nil))
