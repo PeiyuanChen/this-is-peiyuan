@@ -75,25 +75,30 @@
   color: #555;
 }
 
-/* 底部画框：EXIF 靠右，caption 居中 */
+/* EXIF：紧贴照片下方、与照片左边缘对齐（left 由 JS 按图片实际位置设置） */
 .pswp-exif {
   position: absolute;
   pointer-events: none;
   left: 72px;
-  right: 72px;
-  bottom: 78px;
+  bottom: 98px;
   color: #777;
   font-size: 14px;
   line-height: 1.5;
-  text-align: right;
+  white-space: nowrap;
 }
 
+/* caption：在底部画框区域内水平、垂直居中 */
 .pswp-caption {
   position: absolute;
   pointer-events: none;
-  left: 72px;
-  right: 72px;
-  bottom: 26px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
   color: #222;
   font-size: 15px;
   line-height: 1.6;
@@ -101,6 +106,6 @@
 }
 
 @media (max-width: 700px) {
-  .pswp-exif { left: 12px; right: 12px; bottom: 50px; font-size: 13px; }
-  .pswp-caption { left: 12px; right: 12px; bottom: 12px; font-size: 14px; }
+  .pswp-exif { left: 12px; bottom: 76px; font-size: 13px; max-width: calc(100vw - 24px); }
+  .pswp-caption { height: 112px; font-size: 14px; }
 }

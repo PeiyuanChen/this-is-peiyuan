@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // 四周白色画框，照片如装裱；底部边框容纳 EXIF 与 caption
     paddingFn: function (viewportSize) {
       return viewportSize.x < 700
-        ? { top: 16, bottom: 88, left: 12, right: 12 }
+        ? { top: 16, bottom: 112, left: 12, right: 12 }
         : { top: 64, bottom: 140, left: 72, right: 72 };
     }
   });
@@ -38,7 +38,12 @@ document.addEventListener("DOMContentLoaded", function () {
       className: "pswp-exif",
       html: "",
       onInit: function (el, pswp) {
-        pswp.on("change", function () {
+        pswp.on("change", update);
+        pswp.on("resize", update);
+        pswp.on("imageLoadComplete", update);
+
+        function update() {
+          if (!pswp.currSlide) return;
           var d = slides[pswp.currSlide.index].dataset;
           var parts = [];
           if (d.lens) parts.push(d.lens);
@@ -47,7 +52,24 @@ document.addEventListener("DOMContentLoaded", function () {
           if (d.iso) parts.push("ISO " + d.iso);
           el.textContent = parts.join("  ·  ");
           el.style.display = parts.length ? "block" : "none";
-        });
+          alignToPhoto();
+          setTimeout(alignToPhoto, 450); // 切换动画结束后图片位置才稳定
+        }
+
+        // 对齐照片实际左边缘并保持一行间距（照片比例不同，位置也不同）
+        function alignToPhoto() {
+          requestAnimationFrame(function () {
+            var holder = pswp.currSlide && pswp.currSlide.holderElement;
+            var img = holder && holder.querySelector(".pswp__img");
+            if (img && img.complete) {
+              var r = img.getBoundingClientRect();
+              var gap = window.innerWidth < 700 ? 16 : 21;
+              el.style.left = Math.round(r.left) + "px";
+              el.style.top = Math.round(r.bottom + gap) + "px";
+              el.style.bottom = "auto";
+            }
+          });
+        }
       }
     });
 
