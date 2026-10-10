@@ -18,13 +18,14 @@ class ScaffoldTest < Minitest::Test
     assert_equal "single", data["layout"]
     assert data["title"]
     assert data["date"]
-    assert_match(%r{\A_essays/\d{4}-\d{2}-\d{2}-a-title\.md\z}, path.tr("\\", "/"))
+    assert_equal true, data["show_date"]
+    assert_match(%r{\A_essays/a-title\.md\z}, path.tr("\\", "/"))
   end
 
   def test_new_note_carries_subtype
     path = Scaffold.new_note(@root, "mongo", subtype: "topic")
     assert_equal "topic", YAML.load_file(File.join(@root, path), permitted_classes: [Time])["subtype"]
-    assert_match(%r{\A_notes/\d{4}-\d{2}-\d{2}-mongo\.md\z}, path.tr("\\", "/"))
+    assert_match(%r{\A_notes/mongo\.md\z}, path.tr("\\", "/"))
   end
 
   def test_new_album_creates_folder_and_metadata

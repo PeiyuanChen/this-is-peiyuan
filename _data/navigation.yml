@@ -1,3 +1,5 @@
 main:
+  - title: "随感"
+    url: /essays/
   - title: "摄影"
     url: /photography/

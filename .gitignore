@@ -6,9 +6,10 @@ vendor/
 .sass-cache/
 .claude/settings.local.json
 
-# 原片工作区与本地测试样片（绝不入库）
+# 原片与写作工作区、本地测试样片（绝不入库）
 photo-source/
 photos-source/
+essay-source/
 test/resources/
 
 # 图片管线清单

@@ -6,7 +6,7 @@
 
 **Blocked by:** 01（站点骨架与自动部署管线）
 
-**Status:** ready-for-agent
+**Status:** claimed
 
 - [ ] essays collection 生效，永久链接为 `/essays/:year/:slug/`，slug 为英文/拼音
 - [ ] 导航出现中文「随感」入口
