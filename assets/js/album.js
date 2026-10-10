@@ -10,15 +10,11 @@ document.addEventListener("DOMContentLoaded", function () {
     pswpModule: PhotoSwipe,
     bgOpacity: 1,
     showHideAnimationType: "fade",
-    // 留白：横图在下方留两行信息区，竖图在右侧留信息栏
-    paddingFn: function (viewportSize, itemData) {
-      var narrow = viewportSize.x < 700;
-      var side = narrow ? 16 : 40;
-      var top = narrow ? 24 : 40;
-      var portrait = !narrow && itemData.height > itemData.width;
-      return portrait
-        ? { top: top, bottom: top, left: side, right: 380 }
-        : { top: top, bottom: narrow ? 104 : 118, left: side, right: side };
+    // 四周白色画框，照片如装裱；底部边框容纳 EXIF 与 caption
+    paddingFn: function (viewportSize) {
+      return viewportSize.x < 700
+        ? { top: 16, bottom: 88, left: 12, right: 12 }
+        : { top: 64, bottom: 140, left: 72, right: 72 };
     }
   });
 
@@ -71,16 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    pswpOrientation(lightbox.pswp);
   });
-
-  function pswpOrientation(pswp) {
-    pswp.on("change", function () {
-      var d = slides[pswp.currSlide.index].dataset;
-      var portrait = window.innerWidth >= 700 && Number(d.pswpHeight) > Number(d.pswpWidth);
-      pswp.element.classList.toggle("pswp-portrait", portrait);
-    });
-  }
 
   function openFromHash() {
     var match = window.location.hash.match(/photo=(\d+)/);

@@ -5,7 +5,7 @@ layout: single
 {% assign album = page.album %}
 
 <link rel="stylesheet" href="{{ '/assets/photoswipe/photoswipe.css' | relative_url }}">
-<link rel="stylesheet" href="{{ '/assets/css/albums.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/albums.css' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
 
 {% if album.description %}
 <p class="album-description">{{ album.description }}</p>
@@ -37,4 +37,4 @@ layout: single
 
 <script src="{{ '/assets/photoswipe/photoswipe.umd.min.js' | relative_url }}"></script>
 <script src="{{ '/assets/photoswipe/photoswipe-lightbox.umd.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/album.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/album.js' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}"></script>

@@ -75,14 +75,14 @@
   color: #555;
 }
 
-/* 横图：下方两行——EXIF 靠右，caption 居中 */
+/* 底部画框：EXIF 靠右，caption 居中 */
 .pswp-exif {
   position: absolute;
   pointer-events: none;
-  left: 40px;
-  right: 40px;
-  bottom: 62px;
-  color: #555;
+  left: 72px;
+  right: 72px;
+  bottom: 78px;
+  color: #777;
   font-size: 14px;
   line-height: 1.5;
   text-align: right;
@@ -91,34 +91,16 @@
 .pswp-caption {
   position: absolute;
   pointer-events: none;
-  left: 40px;
-  right: 40px;
-  bottom: 20px;
+  left: 72px;
+  right: 72px;
+  bottom: 26px;
   color: #222;
   font-size: 15px;
   line-height: 1.6;
   text-align: center;
 }
 
-/* 竖图：图在左，EXIF 与 caption 在右栏；EXIF 强制单行，避免折行后压住 caption */
-.pswp-portrait .pswp-exif {
-  top: 46px;
-  bottom: auto;
-  left: auto;
-  width: 320px;
-  white-space: nowrap;
-  text-align: left;
-}
-
-.pswp-portrait .pswp-caption {
-  top: 92px;
-  bottom: auto;
-  left: auto;
-  width: 320px;
-  text-align: left;
-}
-
 @media (max-width: 700px) {
-  .pswp-exif { left: 16px; right: 16px; bottom: 58px; font-size: 13px; }
-  .pswp-caption { left: 16px; right: 16px; bottom: 12px; font-size: 14px; }
+  .pswp-exif { left: 12px; right: 12px; bottom: 50px; font-size: 13px; }
+  .pswp-caption { left: 12px; right: 12px; bottom: 12px; font-size: 14px; }
 }
