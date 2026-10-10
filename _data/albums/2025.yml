@@ -1,9 +1,9 @@
 ---
 title: 二〇二五
 date: 2025-01-01
-description: 文昌海边的一年——烟花、草地、沙滩上奔跑的孩子，和那渐渐远去的光阴。
+description: 这一年，从中班到大班。春节里文昌海边的风，夏天的尾声里的岭南。烟花、草地、沙滩上奔跑的孩子，和那渐渐远去的光阴。
 slug: '2025'
-cover: IMG00918
+cover: IMG01740
 photos:
 - file: IMG00918
   width: 2000
@@ -483,20 +483,6 @@ photos:
     thumb: 2025/thumb/IMG03454.jpg
     medium: 2025/medium/IMG03454.jpg
     large: 2025/large/IMG03454.jpg
-- file: IMG03503
-  width: 2000
-  height: 1334
-  exif:
-    make: SONY
-    model: ILCE-7RM3
-    lens: Voigtlander APO-LANTHAR 50mm F2 Aspherical
-    f_number: 5.6
-    exposure: 1/250
-    iso: 100
-  urls:
-    thumb: 2025/thumb/IMG03503.jpg
-    medium: 2025/medium/IMG03503.jpg
-    large: 2025/large/IMG03503.jpg
 - file: IMG03524
   caption: 你看，每次我说不要和那些大的旅行标记站太近，对吧
   width: 2000
