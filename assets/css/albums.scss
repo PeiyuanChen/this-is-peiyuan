@@ -65,32 +65,60 @@
   .photo-grid { column-count: 1; }
 }
 
-/* PhotoSwipe 内 EXIF：叠在图上、清晰可读 */
+/* PhotoSwipe 灯箱：白底留白，文字在留白区 */
+.pswp {
+  --pswp-bg: #ffffff;
+  --pswp-icon: rgba(50, 50, 50, 0.85);
+}
+
+.pswp__counter {
+  color: #555;
+}
+
+/* 横图：下方两行——EXIF 靠右，caption 居中 */
 .pswp-exif {
   position: absolute;
   pointer-events: none;
-  left: 1.2rem;
-  bottom: 3.2rem;
-  color: #fff;
-  font-size: 15px;
-  line-height: 1.4;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
+  left: 40px;
+  right: 40px;
+  bottom: 62px;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: right;
 }
 
-/* PhotoSwipe 内 caption：照片下方 */
 .pswp-caption {
   position: absolute;
   pointer-events: none;
-  left: 1.2rem;
-  right: 1.2rem;
-  bottom: 0.8rem;
-  color: #fff;
-  font-size: 14px;
-  line-height: 1.5;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
+  left: 40px;
+  right: 40px;
+  bottom: 20px;
+  color: #222;
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: center;
 }
 
-@media (max-width: 600px) {
-  .pswp-exif { font-size: 14px; bottom: 3rem; }
-  .pswp-caption { font-size: 13px; }
+/* 竖图：图在左，EXIF 与 caption 在右栏；EXIF 强制单行，避免折行后压住 caption */
+.pswp-portrait .pswp-exif {
+  top: 46px;
+  bottom: auto;
+  left: auto;
+  width: 320px;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.pswp-portrait .pswp-caption {
+  top: 92px;
+  bottom: auto;
+  left: auto;
+  width: 320px;
+  text-align: left;
+}
+
+@media (max-width: 700px) {
+  .pswp-exif { left: 16px; right: 16px; bottom: 58px; font-size: 13px; }
+  .pswp-caption { left: 16px; right: 16px; bottom: 12px; font-size: 14px; }
 }

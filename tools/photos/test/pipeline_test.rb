@@ -1,5 +1,6 @@
 require_relative "test_helper"
 require "yaml"
+require "json"
 require "pipeline"
 
 class PipelineTest < Minitest::Test
@@ -13,7 +14,7 @@ class PipelineTest < Minitest::Test
     @album = File.join(@source_root, "2025")
     FileUtils.mkdir_p(@album)
     FULL_PHOTOS.each { |n| FileUtils.cp(fixture_photo(n), File.join(@album, "#{n}.JPG")) }
-    File.write(File.join(@album, "IMG09227.txt"), "傍晚的光")
+    File.write(File.join(@album, "captions.json"), JSON.dump("IMG09227" => "傍晚的光"))
     File.write(File.join(@album, "album.yml"), {
       "title" => "二〇二五",
       "date" => "2025-10-01",
@@ -73,6 +74,14 @@ class PipelineTest < Minitest::Test
     assert(captioned["urls"].keys.all? { |k| k.is_a?(String) })
 
     assert_equal "IMG07481", data["cover"]
+  end
+
+  def test_runs_without_captions_file
+    File.delete(File.join(@album, "captions.json"))
+    report = run_pipeline
+    assert(report.errors.all? { |e| e.include?("broken.JPG") })
+    data = YAML.load_file(File.join(@data_root, "2025.yml"))
+    assert_nil data["photos"].first["caption"]
   end
 
   def test_cover_override_in_album_metadata

@@ -1,4 +1,5 @@
 require "yaml"
+require "json"
 require "date"
 require "digest"
 require "fileutils"
@@ -55,15 +56,16 @@ class Pipeline
     slug = File.basename(dir)
     meta = load_album_meta(dir)
     photos = photo_files(dir)
+    captions = load_captions(dir)
     cover = meta["cover"] || File.basename(photos.first, ".*")
     entries = photos.map do |src|
       name = File.basename(src, ".*")
-      photo_entry(slug, src, name, manifest, report)
+      photo_entry(slug, src, name, captions, manifest, report)
     end
     write_data(slug, meta, cover, entries)
   end
 
-  def photo_entry(slug, src, name, manifest, report)
+  def photo_entry(slug, src, name, captions, manifest, report)
     key = "#{slug}/#{name}"
     sha = Digest::SHA256.file(src).hexdigest
     outputs = Resizer::LONG_EDGE.map { |tier, edge|
@@ -89,7 +91,7 @@ class Pipeline
     large_dims = image_dims(outputs[:large])
     {
       "file" => name,
-      "caption" => caption_for(src),
+      "caption" => captions[name],
       "width" => large_dims[:width],
       "height" => large_dims[:height],
       "exif" => (ExifReader.read(src) || {}).transform_keys(&:to_s),
@@ -113,12 +115,9 @@ class Pipeline
     File.write(File.join(@data_root, "#{slug}.yml"), YAML.dump(data))
   end
 
-  def caption_for(src)
-    %w[.txt .md].each do |ext|
-      sidecar = src.sub(/\.[^.]+\z/, ext)
-      return File.read(sidecar).strip if File.exist?(sidecar)
-    end
-    nil
+  def load_captions(dir)
+    path = File.join(dir, "captions.json")
+    File.exist?(path) ? JSON.parse(File.read(path)) : {}
   end
 
   def photo_files(dir)

@@ -18,6 +18,7 @@ module Scaffold
     FileUtils.mkdir_p(File.join(root, dir))
     File.write(File.join(root, dir, "album.yml"),
                YAML.dump("title" => "", "date" => "", "description" => "", "cover" => nil))
+    File.write(File.join(root, dir, "captions.json"), "{}\n")
     dir
   end
 

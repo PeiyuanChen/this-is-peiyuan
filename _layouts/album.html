@@ -25,6 +25,7 @@ layout: single
      target="_blank" rel="noopener"
      data-pswp-width="{{ photo.width }}"
      data-pswp-height="{{ photo.height }}"
+     data-lens="{{ photo.exif.lens | escape }}"
      data-f-number="{{ photo.exif.f_number }}"
      data-exposure="{{ photo.exif.exposure }}"
      data-iso="{{ photo.exif.iso }}"

@@ -1,5 +1,6 @@
 require_relative "test_helper"
 require "yaml"
+require "json"
 require "scaffold"
 
 class ScaffoldTest < Minitest::Test
@@ -33,6 +34,7 @@ class ScaffoldTest < Minitest::Test
     assert_equal "", meta["title"]
     assert_equal "", meta["date"]
     assert_nil meta["cover"]
+    assert_equal({}, JSON.parse(File.read(File.join(@root, dir, "captions.json"))))
     assert_match(%r{\Aphoto-source/kyoto-2019\z}, dir.tr("\\", "/"))
   end
 end
