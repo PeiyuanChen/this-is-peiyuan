@@ -6,12 +6,28 @@
 
 **Blocked by:** 01（站点骨架与自动部署管线）
 
-**Status:** claimed
+**Status:** resolved
 
-- [ ] essays collection 生效，永久链接为 `/essays/:year/:slug/`，slug 为英文/拼音
-- [ ] 导航出现中文「随感」入口
-- [ ] 随感列表页按时间倒序、可按年分组
-- [ ] 中文长文排版：中文字体栈、字号、行距、留白、标点处理得当
-- [ ] 移动端响应式，长文阅读舒适
-- [ ] 文章页显示发布日期，文内图片与文字自然混排
-- [ ] 2 篇真实随感上线，本地预览与线上一致
+## Answer
+
+提交 1b63ade，两篇随感已上线（Actions 部署，线上页面 200、与本地预览一致）：
+
+- 列表页 https://peiyuanchen.github.io/this-is-peiyuan/essays/ ，按年分组、组内倒序（已用临时 2024 年文章验证多年份分组与排序后删除）
+- /essays/2026/two-keats-poems/（济慈诗两首，诗歌保留换行、不做两端对齐）
+- /essays/2026/tyrant-leaders-and-corporate-culture/（长文，多级小节）
+
+实现要点：
+- essays collection，permalink `/essays/:year/:slug/`；导航「随感」置于「摄影」之前
+- 中文衬线排版（assets/css/chinese.scss，经 head/custom.html 挂接，未来笔记共用）：正文 18px/行距 1.9、约 40em 行长、两端对齐、hanging-punctuation 渐进增强；移动端 16.5px
+- 修正 new_essay 脚手架：collection 文档 slug 取文件名，故去掉日期前缀、日期入 front matter；new_note 同类问题一并修正（scaffold minitest 同步更新，3 tests / 16 assertions 通过）
+- 顺手清理：Jekyll exclude temp/（旧 playwright 环境曾被拷入 _site）；essay-source/ 与 photo-source/ 同等处理，gitignore 不入库
+- 唯一未用真实素材验证项：文内图片混排（本次素材无图），样式已就位，留待首张配图文章实际检验
+
+
+- [x] essays collection 生效，永久链接为 `/essays/:year/:slug/`，slug 为英文/拼音
+- [x] 导航出现中文「随感」入口
+- [x] 随感列表页按时间倒序、可按年分组
+- [x] 中文长文排版：中文字体栈、字号、行距、留白、标点处理得当
+- [x] 移动端响应式，长文阅读舒适
+- [ ] 文章页显示发布日期，文内图片与文字自然混排（日期已验证；本次素材无配图，混排样式已就位，待首张配图文章实际检验）
+- [x] 2 篇真实随感上线，本地预览与线上一致
