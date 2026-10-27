@@ -1,0 +1,101 @@
+---
+---
+
+/* 首页：随感与相册混合最新流 */
+
+$feed-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+            "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+            "Helvetica Neue", Arial, sans-serif;
+
+.latest-feed {
+  list-style: none;
+  padding: 0;
+  margin: 0.5em 0 1.2em;
+}
+
+.latest-feed li + li {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.feed-item a {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.7rem 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 双类选择器压过 chinese.scss 的 .page__content img（auto 居中外边距会让 flex 行错位） */
+.latest-feed .feed-thumb {
+  width: 120px;
+  height: 80px;
+  flex: 0 0 auto;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+}
+
+/* 随感无封面：等大的安静占位块 */
+.feed-thumb--essay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.045);
+  color: #9a9a9a;
+  font-size: 0.85rem;
+  letter-spacing: 0.35em;
+  text-indent: 0.35em;
+  font-family: $feed-sans;
+}
+
+.feed-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.feed-title {
+  font-size: 1.02rem;
+  line-height: 1.5;
+}
+
+.feed-item a:hover .feed-title {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.feed-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 0.8em;
+  color: #8a8a8a;
+  font-size: 0.82rem;
+  font-family: $feed-sans;
+  white-space: nowrap;
+}
+
+.feed-more {
+  margin-top: 0.4em;
+  font-size: 0.9rem;
+  font-family: $feed-sans;
+}
+
+@media (max-width: 600px) {
+  .feed-item a {
+    gap: 0.7rem;
+    padding: 0.6rem 0;
+  }
+
+  .latest-feed .feed-thumb {
+    width: 84px;
+    height: 56px;
+  }
+
+  .feed-thumb--essay {
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    text-indent: 0.25em;
+  }
+}
