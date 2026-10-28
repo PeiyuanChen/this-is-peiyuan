@@ -1,0 +1,213 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 816 1488" role="img" aria-labelledby="bt bt-d">
+<title id="bt">海边 · 竖式构图</title>
+<desc id="bt-d">竖式构图的海边插画。上方是天空，飘着三朵白云，轻轻左右移动；中间是海，占纵向约四分之一，水面有轻微起伏，一艘极简几何帆船在海上由左向右、再由右向左往返；下方是斜向铺开的沙滩，最宽处占纵向约四分之一，三棵椰子树轻微摇晃，三把橘色遮阳伞，一把躺椅上躺着一个小人。</desc>
+
+<defs>
+  <linearGradient id="b-sky" x1="0" y1="0" x2="0" y2="820" gradientUnits="userSpaceOnUse">
+    <stop offset="0"    stop-color="#4ea8d8"/>
+    <stop offset="0.42" stop-color="#7fc5e6"/>
+    <stop offset="0.75" stop-color="#aedcf0"/>
+    <stop offset="1"    stop-color="#dceef6"/>
+  </linearGradient>
+
+  <linearGradient id="b-sea" x1="0" y1="744" x2="0" y2="1400" gradientUnits="userSpaceOnUse">
+    <stop offset="0"    stop-color="#2a7ba4"/>
+    <stop offset="0.35" stop-color="#3d99b8"/>
+    <stop offset="0.72" stop-color="#5cb7cf"/>
+    <stop offset="1"    stop-color="#86cfda"/>
+  </linearGradient>
+
+  <linearGradient id="b-sand" x1="0" y1="1100" x2="0" y2="1488" gradientUnits="userSpaceOnUse">
+    <stop offset="0"   stop-color="#f7e8c2"/>
+    <stop offset="0.5" stop-color="#eed7a5"/>
+    <stop offset="1"   stop-color="#dcc08b"/>
+  </linearGradient>
+
+  <filter id="b-grain" filterUnits="userSpaceOnUse" x="0" y="0" width="816" height="1488">
+    <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="3" stitchTiles="stitch"/>
+    <feColorMatrix values="0 0 0 0 0.36  0 0 0 0 0.29  0 0 0 0 0.21  -2.5 0 0 0 1.3"/>
+  </filter>
+
+  <!-- 椰子树：基点 (0,0)，树高 520 -->
+  <g id="b-palm">
+    <path class="trunk" d="M-12 0 C-7 -170 -16 -370 -2 -520 L12 -520 C3 -370 13 -170 12 0 Z" fill="#8b6b47"/>
+    <path d="M-6 -8 C-2 -170 -9 -370 3 -518 L8 -518 C0 -370 6 -170 7 -8 Z" fill="#a4815a" opacity=".5"/>
+    <g transform="translate(5,-520)">
+      <g>
+        <circle cx="-9" cy="10" r="7"   fill="#79582f"/>
+        <circle cx="2"  cy="15" r="7"   fill="#8a673a"/>
+        <circle cx="12" cy="7"  r="6.5" fill="#79582f"/>
+      </g>
+      <g transform="rotate(195)"><g class="frond" style="--fd:-0.2s"><path d="M0 0 C46 -30 104 -40 156 -28 C104 -13 47 -6 0 0 Z" fill="#2f6440"/></g></g>
+      <g transform="rotate(-150)"><g class="frond" style="--fd:-1.4s"><path d="M0 0 C46 -30 104 -40 156 -28 C104 -13 47 -6 0 0 Z" fill="#3f7a4e"/></g></g>
+      <g transform="rotate(-115)"><g class="frond" style="--fd:-2.6s"><path d="M0 0 C46 -30 104 -40 156 -28 C104 -13 47 -6 0 0 Z" fill="#2f6440"/></g></g>
+      <g transform="rotate(-80)"><g class="frond" style="--fd:-0.8s"><path d="M0 0 C46 -30 104 -40 156 -28 C104 -13 47 -6 0 0 Z" fill="#47855a"/></g></g>
+      <g transform="rotate(-45)"><g class="frond" style="--fd:-3.2s"><path d="M0 0 C46 -30 104 -40 156 -28 C104 -13 47 -6 0 0 Z" fill="#356b45"/></g></g>
+      <g transform="rotate(-10)"><g class="frond" style="--fd:-2.0s"><path d="M0 0 C46 -30 104 -40 156 -28 C104 -13 47 -6 0 0 Z" fill="#47855a"/></g></g>
+      <g transform="rotate(25)"><g class="frond" style="--fd:-4.1s"><path d="M0 0 C46 -30 104 -40 156 -28 C104 -13 47 -6 0 0 Z" fill="#3f7a4e"/></g></g>
+      <g transform="rotate(60)"><g class="frond" style="--fd:-1.0s"><path d="M0 0 C46 -30 104 -40 156 -28 C104 -13 47 -6 0 0 Z" fill="#356b45"/></g></g>
+    </g>
+  </g>
+
+  <!-- 遮阳伞：基点 (0,0) 为伞柄落地点，伞面高度 110 -->
+  <g id="b-umbrella">
+    <path d="M0 0 L0 -116" stroke="#c08a4e" stroke-width="5" stroke-linecap="round"/>
+    <path d="M-90 -104 Q0 -208 90 -104 Z" fill="#f0803f"/>
+    <path d="M-90 -104 Q0 -88 90 -104 Q0 -96 -90 -104 Z" fill="#d4621f"/>
+    <path d="M-60 -106 Q-45 -118 -30 -106 Z" fill="#ffffff" opacity=".22"/>
+    <path d="M0 -160 L0 -172" stroke="#c08a4e" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+</defs>
+
+<style>
+  /* 轻微动态：全部默认无限循环，靠 --dly / --fd 错开相位，避免整齐划一 */
+  @keyframes frond-sway { 0%,100%{transform:rotate(-2.4deg)} 50%{transform:rotate(2.4deg)} }
+  @keyframes trunk-sway { 0%,100%{transform:rotate(-0.9deg)} 50%{transform:rotate(0.9deg)} }
+  @keyframes cloud-drift{ 0%,100%{transform:translateX(-16px)} 50%{transform:translateX(16px)} }
+  @keyframes wave-drift { 0%,100%{transform:translateX(-13px)} 50%{transform:translateX(13px)} }
+  @keyframes wave-fade  { 0%,100%{opacity:.18} 50%{opacity:.55} }
+  @keyframes foam-breathe{0%,100%{transform:translateY(0)} 50%{transform:translateY(4px)} }
+  @keyframes boat-drift  { from{transform:translateX(0)} to{transform:translateX(452px)} }
+  @keyframes boat-bob    { 0%,100%{transform:translateY(0) rotate(-1.2deg)} 50%{transform:translateY(-5px) rotate(1.2deg)} }
+
+  .frond{transform-box:fill-box;transform-origin:0% 100%;
+    animation:frond-sway var(--dur,6s) ease-in-out infinite;
+    animation-delay:calc(var(--dly,0s) + var(--fd,0s))}
+  .trunk{transform-box:fill-box;transform-origin:50% 100%;
+    animation:trunk-sway 9s ease-in-out infinite;
+    animation-delay:calc(var(--dly,0s) - 1s)}
+  .cloud{animation:cloud-drift var(--cdur,22s) ease-in-out infinite;animation-delay:var(--cdly,0s)}
+  .wave {animation:wave-drift var(--wdur,13s) ease-in-out infinite;animation-delay:var(--wdly,0s)}
+  .shim {animation:wave-fade 6s ease-in-out infinite;animation-delay:var(--sdly,0s)}
+  .foam {animation:foam-breathe 7s ease-in-out infinite}
+  .boat-drift{animation:boat-drift 34s ease-in-out infinite alternate}
+  .boat-bob{transform-box:fill-box;transform-origin:50% 100%;animation:boat-bob 4.2s ease-in-out infinite}
+
+  @media (prefers-reduced-motion:reduce){
+    .frond,.trunk,.cloud,.wave,.shim,.foam,.boat-drift,.boat-bob{animation:none}
+  }
+</style>
+
+<!-- ============ 天空 ============ -->
+<rect x="-60" y="-60" width="936" height="820" fill="url(#b-sky)"/>
+
+<g class="cloud" style="--cdur:24s;--cdly:-3s">
+  <g fill="#ffffff" opacity=".88">
+    <ellipse cx="196" cy="252" rx="82" ry="29"/>
+    <ellipse cx="256" cy="238" rx="58" ry="23"/>
+    <ellipse cx="142" cy="266" rx="52" ry="20"/>
+    <ellipse cx="222" cy="268" rx="66" ry="19"/>
+  </g>
+</g>
+<g class="cloud" style="--cdur:19s;--cdly:-9s">
+  <g fill="#ffffff" opacity=".8" transform="translate(360,-70) scale(0.82)">
+    <ellipse cx="196" cy="252" rx="82" ry="29"/>
+    <ellipse cx="256" cy="238" rx="58" ry="23"/>
+    <ellipse cx="142" cy="266" rx="52" ry="20"/>
+    <ellipse cx="222" cy="268" rx="66" ry="19"/>
+  </g>
+</g>
+<g class="cloud" style="--cdur:27s;--cdly:-15s">
+  <g fill="#ffffff" opacity=".7" transform="translate(-40,196) scale(0.66)">
+    <ellipse cx="196" cy="252" rx="82" ry="29"/>
+    <ellipse cx="256" cy="238" rx="58" ry="23"/>
+    <ellipse cx="142" cy="266" rx="52" ry="20"/>
+    <ellipse cx="222" cy="268" rx="66" ry="19"/>
+  </g>
+</g>
+
+<!-- ============ 海 ============ -->
+<rect x="-60" y="744" width="936" height="800" fill="url(#b-sea)"/>
+<rect x="-60" y="740" width="936" height="5" fill="#eaf6fa" opacity=".5"/>
+
+<g stroke="#dff0f6" fill="none" stroke-linecap="round">
+  <path class="wave" style="--wdur:15s;--wdly:-2s"  d="M-60 792 q60 -7 120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0" stroke-width="2.5" opacity=".30"/>
+  <path class="wave" style="--wdur:12s;--wdly:-6s"  d="M-60 842 q60 -8 120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0" stroke-width="3"   opacity=".34"/>
+  <path class="wave" style="--wdur:17s;--wdly:-10s" d="M-60 896 q60 -9 120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0" stroke-width="3.2" opacity=".30"/>
+  <path class="wave" style="--wdur:13s;--wdly:-4s"  d="M-60 954 q60 -10 120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0" stroke-width="3.5" opacity=".36"/>
+  <path class="wave" style="--wdur:16s;--wdly:-12s" d="M-60 1016 q60 -10 120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0" stroke-width="4"   opacity=".32"/>
+  <path class="wave" style="--wdur:11s;--wdly:-8s"  d="M-60 1082 q60 -11 120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0" stroke-width="4.2" opacity=".30"/>
+  <path class="wave" style="--wdur:18s;--wdly:-14s" d="M-60 1152 q60 -11 120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0" stroke-width="4.5" opacity=".26"/>
+</g>
+
+<!-- 海面碎光 -->
+<g stroke="#f2fbfe" stroke-width="3" stroke-linecap="round" fill="none">
+  <path class="shim" style="--sdly:-0.5s" d="M120 880 h72"/>
+  <path class="shim" style="--sdly:-2.2s" d="M540 936 h58"/>
+  <path class="shim" style="--sdly:-3.8s" d="M268 1044 h86"/>
+  <path class="shim" style="--sdly:-1.4s" d="M640 1108 h64"/>
+  <path class="shim" style="--sdly:-4.6s" d="M356 1188 h74"/>
+</g>
+
+<!-- 帆船：由左向右，再由右向左 -->
+<g transform="translate(70,1016)">
+  <g class="boat-drift">
+    <g class="boat-bob">
+      <path d="M-3 -56 L2 -6 L-21 -6 Z" fill="#e7e2d6"/>
+      <path d="M3 -62 L4 -6 L35 -6 Z"    fill="#f8f5ee"/>
+      <path d="M0 -64 L0 -4" stroke="#2f3d47" stroke-width="3.5" stroke-linecap="round"/>
+      <path d="M-27 -4 L31 -4 L23 10 L-19 10 Z" fill="#2f3d47"/>
+      <path d="M-27 -4 L31 -4" stroke="#4d5f6b" stroke-width="2" stroke-linecap="round"/>
+    </g>
+  </g>
+</g>
+
+<!-- ============ 沙滩：斜线，最宽处纵向占比 1/4 ============ -->
+<path d="M-60 1116 L876 1200 L876 1544 L-60 1544 Z" fill="url(#b-sand)"/>
+
+<!-- 浪线（潮痕） -->
+<g class="foam">
+  <path d="M-60 1108 L876 1192" stroke="#ffffff" stroke-width="10" opacity=".22" fill="none"/>
+  <path d="M-60 1116 L876 1200" stroke="#ffffff" stroke-width="6"  opacity=".55" fill="none"/>
+</g>
+<g class="foam" style="animation-delay:-3.5s">
+  <path d="M-60 1142 L876 1226" stroke="#ffffff" stroke-width="7" opacity=".28" fill="none"/>
+</g>
+
+<!-- 沙地纹理 -->
+<g stroke="#c9ab72" stroke-width="3" stroke-linecap="round" opacity=".35" fill="none">
+  <path d="M60 1300 q40 -10 78 -2"/>
+  <path d="M300 1372 q46 -11 88 -3"/>
+  <path d="M540 1428 q42 -10 80 -2"/>
+  <path d="M180 1440 q50 -12 96 -3"/>
+</g>
+
+<!-- 地面投影 -->
+<g fill="#8a6a3c" opacity=".16">
+  <ellipse cx="76"  cy="1478" rx="52" ry="11"/>
+  <ellipse cx="176" cy="1452" rx="46" ry="10"/>
+  <ellipse cx="282" cy="1482" rx="42" ry="9"/>
+  <ellipse cx="356" cy="1466" rx="58" ry="10"/>
+  <ellipse cx="524" cy="1404" rx="42" ry="8"/>
+  <ellipse cx="652" cy="1356" rx="32" ry="6"/>
+</g>
+
+<!-- 椰子树 -->
+<use href="#b-palm" xlink:href="#b-palm" transform="translate(76,1478) scale(1.02)"  style="--dly:-0.5s;--dur:6.2s"/>
+<use href="#b-palm" xlink:href="#b-palm" transform="translate(176,1452) scale(1.18)" style="--dly:-2.3s;--dur:7.1s"/>
+<use href="#b-palm" xlink:href="#b-palm" transform="translate(282,1482) scale(0.94)" style="--dly:-4.0s;--dur:5.6s"/>
+
+<!-- 遮阳伞 -->
+<use href="#b-umbrella" xlink:href="#b-umbrella" transform="translate(524,1404) scale(0.72)"/>
+<use href="#b-umbrella" xlink:href="#b-umbrella" transform="translate(652,1356) scale(0.54)"/>
+<use href="#b-umbrella" xlink:href="#b-umbrella" transform="translate(356,1466) scale(1)"/>
+
+<!-- 躺椅 + 小人 -->
+<g>
+  <path d="M404 1456 L401 1476" stroke="#33424e" stroke-width="6" stroke-linecap="round"/>
+  <path d="M520 1448 L518 1470" stroke="#33424e" stroke-width="6" stroke-linecap="round"/>
+  <path d="M378 1412 L402 1452" stroke="#33424e" stroke-width="8" stroke-linecap="round"/>
+  <path d="M402 1452 L530 1444" stroke="#33424e" stroke-width="8" stroke-linecap="round"/>
+  <path d="M384 1426 L410 1446" stroke="#5c6d78" stroke-width="4" stroke-linecap="round" opacity=".7"/>
+
+  <path d="M394 1422 Q444 1436 500 1442" stroke="#eab98f" stroke-width="21" stroke-linecap="round" fill="none"/>
+  <path d="M498 1442 L536 1437" stroke="#eab98f" stroke-width="15" stroke-linecap="round" fill="none"/>
+  <circle cx="386" cy="1402" r="13" fill="#eab98f"/>
+  <path d="M375 1398 q11 -13 22 -2" stroke="#4a3524" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <path d="M430 1444 L452 1456" stroke="#eab98f" stroke-width="8" stroke-linecap="round"/>
+</g>
+
+<!-- ============ 质感层 ============ -->
+<rect id="grainLayer" x="0" y="0" width="816" height="1488" filter="url(#b-grain)" opacity=".15"
+      style="mix-blend-mode:multiply" pointer-events="none"/>
+</svg>
