@@ -1,5 +1,6 @@
 title: "Peiyuan"
 locale: "zh-CN"
+url: "https://peiyuanchen.github.io"
 
 image_cdn: ""
 
@@ -11,6 +12,8 @@ collections:
   essays:
     output: true
     permalink: /essays/:year/:slug/
+
+# 随感 RSS 由根目录物理 feed.xml 模板自渲染（jekyll-feed 检测到同名物理文件会跳过生成）
 
 exclude:
   - temp

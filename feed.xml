@@ -1,0 +1,29 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 随感 RSS（Atom）。jekyll-feed 检测到源目录存在物理 feed.xml 会跳过自身生成，
+     故此处手写模板；子路径部署（baseurl）下 absolute_url 同样正确。 -->
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <generator uri="https://jekyllrb.com/" version="{{ jekyll.version }}">Jekyll</generator>
+  <link href="{{ '/feed.xml' | absolute_url }}" rel="self" type="application/atom+xml"/>
+  <link href="{{ '/' | absolute_url }}" rel="alternate" type="text/html"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>{{ '/feed.xml' | absolute_url }}</id>
+  <title type="html">{{ site.title | xml_escape }}</title>
+  <subtitle type="html">随感</subtitle>
+  <author>
+    <name>陈培源</name>
+  </author>
+  {% assign essays_sorted = site.essays | sort: "date" | reverse %}
+  {% for essay in essays_sorted limit: 20 %}
+  <entry>
+    <title type="html">{{ essay.title | smartify | xml_escape }}</title>
+    <link href="{{ essay.url | absolute_url }}" rel="alternate" type="text/html" title="{{ essay.title | xml_escape }}"/>
+    <published>{{ essay.date | date_to_xmlschema }}</published>
+    <updated>{{ essay.date | date_to_xmlschema }}</updated>
+    <id>{{ essay.url | absolute_url }}</id>
+    <content type="html" xml:base="{{ essay.url | absolute_url }}">{{ essay.content | xml_escape }}</content>
+  </entry>
+  {% endfor %}
+</feed>
