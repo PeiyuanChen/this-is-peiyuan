@@ -19,6 +19,25 @@ bundle exec jekyll serve
 
 线上地址带子路径 `/this-is-peiyuan`（GitHub Pages 的 `baseurl`），两者不同属正常现象。
 
+## 修改首页
+
+首页内容都在 `index.md`，直接编辑即可，不需要碰模板和样式。
+
+### 自我介绍（Bio）
+
+分短文与长文两部分，对应首页右上角的 Default / Long 两个标签：
+
+- 短文：`<div class="bio-short" markdown="1">` 里的两段，访客默认看到
+- 长文：`<div class="bio-long" markdown="1">` 里的段落，点 Long 才展开
+
+在对应位置增删段落即可，段落之间空一行。标签切换的代码（两个 `<input class="bio-radio">` 和 `bio-bar` 那一段）不要动；`markdown="1"` 属性也要保留，否则 div 里的文字不会按 Markdown 渲染。
+
+### 右栏插画
+
+- 文件位置：`assets/images/beach.svg`（竖式，仅桌面端显示，手机端自动隐藏）
+- 换图最省事的方式：用新的竖式插画替换同名文件。若换文件名，需同步改 `index.md` 末尾 `<aside class="home-art">` 里的路径与 width/height
+- 显示宽度在 `assets/css/home.scss` 的 `.home-art img` 的 `max-width`（当前 430px）调整
+
 ## 添加相册
 
 相册由工具链自动生成：原片放在 `photo-source/`，构建后生成多档图片（`assets/photos/`）和相册数据（`_data/albums/`），页面由 Jekyll 自动生成。
@@ -73,7 +92,7 @@ ruby tools/photos/bin/build_albums
 
 ### 6. 本地验证与发布
 
-Jekyll 服务开着会自动重建，在 <http://127.0.0.1:4000/photography/> 查看，新相册按日期倒序排列。确认无误后提交生成的文件并推送：
+Jekyll 服务开着会自动重建，在 <http://127.0.0.1:4000/photography/> 查看，新相册按日期倒序排列，同时自动出现在首页「相册」区（显示封面缩略图），无需额外操作。确认无误后提交生成的文件并推送：
 
 ```powershell
 git add assets/photos _data/albums
@@ -117,3 +136,10 @@ git add _essays
 git commit -m "新增随感：<标题>"
 git push
 ```
+
+推送部署后，新随感自动出现在两个地方：
+
+- 首页「随感」区（最新 6 篇，纯文字标题+日期）
+- RSS 订阅源（最新 20 篇全文），朋友无需来访即可在阅读器收到更新
+
+订阅地址：<https://peiyuanchen.github.io/this-is-peiyuan/feed.xml>（多数阅读器也支持直接填网站首页地址自动发现）。
