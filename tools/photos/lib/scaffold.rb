@@ -9,11 +9,6 @@ module Scaffold
     create_doc(root, "_essays", slug, "layout" => "single", "show_date" => true)
   end
 
-  def new_note(root, slug, subtype:)
-    create_doc(root, "_notes", slug,
-               "layout" => "single", "show_date" => true, "subtype" => subtype)
-  end
-
   def new_album(root, slug)
     dir = File.join("photo-source", slug)
     FileUtils.mkdir_p(File.join(root, dir))

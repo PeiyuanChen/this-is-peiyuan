@@ -22,12 +22,6 @@ class ScaffoldTest < Minitest::Test
     assert_match(%r{\A_essays/a-title\.md\z}, path.tr("\\", "/"))
   end
 
-  def test_new_note_carries_subtype
-    path = Scaffold.new_note(@root, "mongo", subtype: "topic")
-    assert_equal "topic", YAML.load_file(File.join(@root, path), permitted_classes: [Time])["subtype"]
-    assert_match(%r{\A_notes/mongo\.md\z}, path.tr("\\", "/"))
-  end
-
   def test_new_album_creates_folder_and_metadata
     dir = Scaffold.new_album(@root, "kyoto-2019")
     assert File.directory?(File.join(@root, dir))
