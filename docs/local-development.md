@@ -108,7 +108,7 @@ ruby tools/photos/bin/build_albums
 
 ### 6. 本地验证与发布
 
-Jekyll 服务开着会自动重建，在 <http://127.0.0.1:4000/photography/> 查看，新相册按日期倒序排列，同时自动出现在首页「相册」区（显示封面缩略图），无需额外操作。确认无误后提交生成的文件并推送：
+Jekyll 服务开着会自动重建，在 <http://127.0.0.1:4000/photography/> 查看，新相册按日期倒序排列，同时自动出现在首页「摄影」区（显示封面缩略图），无需额外操作。确认无误后提交生成的文件并推送：
 
 ```powershell
 git add assets/photos _data/albums

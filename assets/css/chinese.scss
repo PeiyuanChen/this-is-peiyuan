@@ -121,8 +121,16 @@ $cjk-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   margin-bottom: 0.7em;
 }
 
+/* 标题以普通文字呈现：继承正文颜色、无下划线；悬停时才出现下划线提示可点 */
 .essay-list a {
   flex: 0 1 auto;
+  color: inherit;
+  text-decoration: none;
+}
+
+.essay-list a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .essay-list time {
