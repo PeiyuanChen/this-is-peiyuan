@@ -1,6 +1,7 @@
 ---
 title:
 layout: single
+description: 陈培源的个人网站：关于生活与思考的文字，以及他的摄影作品。
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
