@@ -3,7 +3,7 @@ layout: null
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <!-- 随感 RSS（Atom）。jekyll-feed 检测到源目录存在物理 feed.xml 会跳过自身生成，
-     故此处手写模板；子路径部署（baseurl）下 absolute_url 同样正确。 -->
+     故此处手写模板；绝对链接取自 _config.yml 的 url（自定义域名 peiyuan.me）。 -->
 <feed xmlns="http://www.w3.org/2005/Atom">
   <generator uri="https://jekyllrb.com/" version="{{ jekyll.version }}">Jekyll</generator>
   <link href="{{ '/feed.xml' | absolute_url }}" rel="self" type="application/atom+xml"/>

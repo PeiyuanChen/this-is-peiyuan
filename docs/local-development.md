@@ -28,12 +28,12 @@ bundle exec jekyll serve
 
 ## 访问
 
-本地地址（baseurl 为空，**没有** `/this-is-peiyuan` 子路径）：
+本地地址：
 
 - 首页：<http://127.0.0.1:4000/>
 - 摄影：<http://127.0.0.1:4000/photography/>
 
-线上地址带子路径 `/this-is-peiyuan`（GitHub Pages 的 `baseurl`），两者不同属正常现象。
+本地与线上均在根路径提供服务（线上自定义域名 peiyuan.me，baseurl 为空），地址结构一致。
 
 ## 修改首页
 
@@ -158,4 +158,4 @@ git push
 - 首页「随感」区（最新 6 篇，纯文字标题+日期）
 - RSS 订阅源（最新 20 篇全文），朋友无需来访即可在阅读器收到更新
 
-订阅地址：<https://peiyuanchen.github.io/this-is-peiyuan/feed.xml>（多数阅读器也支持直接填网站首页地址自动发现）。
+订阅地址：<https://peiyuan.me/feed.xml>（多数阅读器也支持直接填网站首页地址自动发现）。

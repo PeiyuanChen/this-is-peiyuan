@@ -32,7 +32,9 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Build with Jekyll
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        # 自定义域名 peiyuan.me 在根路径提供服务，baseurl 必须为空；
+        # configure-pages 对 project 仓库默认输出 /this-is-peiyuan，这里显式覆盖
+        run: bundle exec jekyll build --baseurl ""
         env:
           JEKYLL_ENV: production
 
