@@ -121,16 +121,16 @@ $cjk-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   margin-bottom: 0.7em;
 }
 
-/* 标题以普通文字呈现：继承正文颜色、无下划线；悬停时才出现下划线提示可点 */
+/* 标题以普通文字呈现：继承正文颜色，悬停也不出现下划线
+ * （主题 .page__content a:hover 默认有下划线，需更高特异性显式压过） */
 .essay-list a {
   flex: 0 1 auto;
   color: inherit;
   text-decoration: none;
 }
 
-.essay-list a:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
+.page__content .essay-list a:hover {
+  text-decoration: none;
 }
 
 .essay-list time {

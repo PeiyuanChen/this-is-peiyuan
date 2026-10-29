@@ -125,6 +125,11 @@ body #main .page__inner-wrap {
   margin: 1.9em 0 0.5em;
 }
 
+/* 两个区块之间：「全部随感」到「摄影」标题的间距比常规标题上边距翻一倍 */
+.home-section + .home-section h2 {
+  margin-top: 2.0em;
+}
+
 /* 相册区：缩略图行（沿用票据 06 样式，去掉类型标记）。
  * .page__content 前缀压过 chinese.scss 的列表缩进与 li 间距 */
 .page__content .album-feed {
@@ -172,11 +177,6 @@ body #main .page__inner-wrap {
   line-height: 1.5;
 }
 
-.album-feed a:hover .feed-title {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
 .album-feed time {
   color: $muted;
   font-size: 0.82em;
@@ -211,17 +211,18 @@ body #main .page__inner-wrap {
   flex: 0 1 auto;
 }
 
-.essay-feed a:hover .essay-title {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
 .essay-feed time {
   margin-left: auto;
   color: $muted;
   font-size: 0.85em;
   font-family: $feed-sans;
   white-space: nowrap;
+}
+
+/* 列表条目悬停不出现下划线（主题 .page__content a:hover 默认有，需更高特异性压过） */
+.page__content .album-feed a:hover,
+.page__content .essay-feed a:hover {
+  text-decoration: none;
 }
 
 .page__content .feed-more {

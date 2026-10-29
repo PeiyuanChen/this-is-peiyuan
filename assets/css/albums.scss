@@ -15,6 +15,14 @@
   color: inherit;
 }
 
+/* 悬停/访问后也不出现下划线、不变链接色，始终保持普通文字色：
+ * 主题 .page__content a:not(.btn):hover 为 (0,3,1)，需 a.album-card 提到 (0,4,0) 才能压过 */
+.page__content a.album-card:hover,
+.page__content a.album-card:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
 .album-card img {
   width: 100%;
   aspect-ratio: 3 / 2;
