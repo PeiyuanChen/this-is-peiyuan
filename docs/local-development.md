@@ -1,5 +1,21 @@
 # 本地开发
 
+## 环境依赖（2026-10-29 记录）
+
+| 依赖 | 版本 | 说明 |
+| --- | --- | --- |
+| Ruby | 3.3.x（本机 3.3.7；CI 固定 3.3） | <https://rubyinstaller.org/>（Windows 用 RubyInstaller） |
+| Bundler | 2.6.6 | 随 Ruby 安装，版本不符时 `gem install bundler -v 2.6.6` |
+| Jekyll | 4.4.1 | 站点构建，Gemfile 约束 `~> 4.4` |
+| minimal-mistakes-jekyll | 4.28.1 | 主题 |
+| ffmpeg | 9.0.1 | 照片管线缩放图片，需自行安装并加入 PATH；版本不必精确一致，能执行即可 |
+| exifr | 1.5.1 | 照片管线读取 EXIF 与图片尺寸 |
+| jekyll-feed | 0.18.0 | 随感 RSS（feed.xml） |
+| jekyll-sitemap | 1.4.0 | sitemap |
+| jekyll-paginate / jekyll-gist / jemoji / jekyll-include-cache | 1.1.0 / 1.5.0 / 0.13.0 / 0.3.1 | 主题依赖的插件 |
+
+gem 的完整版本清单以 [Gemfile.lock](../Gemfile.lock) 为准。换机或多年后重建环境时：装 Ruby 3.3.x 与 ffmpeg，然后在项目根目录执行 `bundle install` 即可。
+
 ## 启动
 
 在项目根目录 `D:\tasks\personal_site` 打开 PowerShell：

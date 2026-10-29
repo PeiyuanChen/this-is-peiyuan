@@ -1,14 +1,13 @@
-# 09: README 与首批内容导入验证
+# 09: 依赖版本记录（原「README 与首批内容导入验证」，范围缩小）
 
-**What to build:** 作者在多年后仍能凭 README 独立完成写文章、导照片、发布，以及未来切域名/对象存储的操作；同时用真实的较大批量照片验证管线稳定、仓库体积与国内访问速度可接受，为后续两三百张全量导入建立信心。
+**What to build:** 记录当前站点使用的运行时与 gem 版本，使多年后换机仍能凭文档重建本地环境。
 
-**Blocked by:** 02、03、04、05、06、07、08 全部完成
+**范围变更（2026-10-29 作者确认）：** 原票据中的 README 操作手册、域名绑定/COS 切换清单、大批量照片导入验证、仓库体积与国内访问实测、备份等内容全部放弃。操作步骤已沉淀在 `docs/local-development.md`（启动、相册、随感、首页、环境依赖各节），无需另建 README。
 
-**Status:** ready-for-agent
+**Status:** resolved
 
-- [ ] README 覆盖：环境准备（含必须用 bundle exec、WindowsApps 占位程序问题）
-- [ ] README 覆盖：写随感/笔记的步骤、本地预览、git add/commit/push 发布步骤
-- [ ] README 覆盖：照片导入步骤、脚本行为、caption/封面/相册元数据的编辑位置
-- [ ] README 给出未来购买域名绑定、切换 COS/TOS（含备案提示）的检查清单
-- [ ] 用真实照片完成 1–2 个相册、几十张规模的批量导入，脚本稳定、报告清晰
-- [ ] 确认仓库体积可控（无需 LFS），线上国内访问速度有初步实测结论
+- [x] `docs/local-development.md` 新增「环境依赖」节：Ruby 3.3.x / Bundler 2.6.6 / Jekyll 4.4.1 / Minimal Mistakes 4.28.1 / ffmpeg 9.0.1 / exifr 1.5.1 及各 jekyll 插件版本，完整清单指向 Gemfile.lock，并写明换机重建步骤（装 Ruby 3.3.x 与 ffmpeg 后 `bundle install`）
+
+## Answer
+
+2026-10-29 完成，依赖版本表已写入 docs/local-development.md。相册与随感已用真实内容上线（2025、腾格尔沙漠两个相册；随感《开篇》），照片管线在日常添加相册过程中持续得到验证，无需单独的批量导入演练。

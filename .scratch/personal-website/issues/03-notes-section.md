@@ -6,7 +6,7 @@
 
 **Blocked by:** 01（站点骨架与自动部署管线）；排版约定与票据 02 一致，可与 02 并行
 
-**Status:** ready-for-agent
+**Status:** cancelled（2026-10-29 作者确认取消：近期不做笔记栏目，站点只保留随感与摄影）
 
 - [ ] notes collection 生效，永久链接为 `/notes/:slug/`
 - [ ] front matter 字段区分子类（读书 / 专题），读书笔记可记录书名
